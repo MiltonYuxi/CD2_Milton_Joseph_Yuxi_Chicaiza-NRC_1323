@@ -1,0 +1,97 @@
+--------------------
+Main.java
+-------------------
+public class Main {
+    
+	public static void main(String[] args) {
+	    Animal Animal_1 = new Animal();
+	    Animal_1.Edad_A="25";
+	    Animal_1.Especie_A="Oso Pardo ";
+	    Animal_1.Dormir();
+	    
+		Cuidador Cuidador_M=new Cuidador();
+		Cuidador_M.Nombre_C=" Joseph";
+		Cuidador_M.Horario_C=" de 9am hasta las 10";
+		Cuidador_M.Alimentar_A();
+		
+		Habitad Habitad_A=new Habitad();
+		Habitad_A.Tamaño_h=" 10 hectáreas";
+		Habitad_A.tipo_h=" selva ";
+		Habitad_A.Agregar_habitad();
+		
+		Veterinario Veterinario_V=new Veterinario();
+		Veterinario_V.Nombre_V=" Juan ";
+		Veterinario_V.Especialidad_V=" Veterinario ";
+		Veterinario_V.Revisar_Animal();
+		
+		Alimentacion Alimento_A=new Alimentacion();
+		Alimento_A.Cantidad_a="30 kilos";
+		Alimento_A.tipo_comida_a=" carne fresca ";
+		Alimento_A.comer_A();
+	
+	}
+}
+
+---------------------------------
+Animal.java
+---------------------------------
+public class Animal {
+    public String Edad_A;
+    public String Especie_A;
+    
+    public void Dormir() {
+        System.out.println("El animal " + Especie_A+"tiene " +Edad_A+ " años, y por eso duerme mucho");
+    }
+}
+
+
+---------------------------------
+Cuidador.java
+---------------------------------
+public class Cuidador {
+    public String Nombre_C;
+    public String Horario_C;
+    
+    public void Alimentar_A() {
+        System.out.println("El cuidador" +Nombre_C+ " alimenta a los animales en el horario "+ Horario_C+"am");
+    }
+}
+
+
+---------------------------------
+Habitad.java
+---------------------------------
+public class Habitad {
+    public String Tamaño_h;
+    public String tipo_h;
+    
+    public void Agregar_habitad() {
+        System.out.println("Los habitad de los animales tienen un tamaño de" +Tamaño_h+ " y es de tipo "+ tipo_h+ "segun su especie.");
+    }
+}
+
+
+---------------------------------
+Veterinario.java
+---------------------------------
+
+public class Veterinario {
+    public String Nombre_V;
+    public String Especialidad_V;
+    
+    public void Revisar_Animal() {
+        System.out.println("El" +Especialidad_V+ "de nombre" +Nombre_V+ "revisa a los animales que tengan buenas condiciones.");
+    }
+}
+---------------------------------
+Alimentacion.java
+---------------------------------
+public class Alimentacion {
+    public String Cantidad_a;
+    public String tipo_comida_a;
+    
+    public void comer_A() {
+        System.out.println("El leon al dia come " +Cantidad_a+ " de"+tipo_comida_a+ "por dia");
+    }
+}
+
